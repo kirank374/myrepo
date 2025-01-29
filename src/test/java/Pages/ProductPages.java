@@ -21,7 +21,7 @@ public class ProductPages {
     public static String sneakers_firstshoename="/html/body/div[4]/table/tbody/tr[1]/td[1]";
 
     public static void formalshoes_verifyTitle(){
-        String expectedTitleFS ="Formal Shoes ";
+        String expectedTitleFS ="Formal Shoes";
 String actualTitleFS= driver.findElement(By.xpath(formalShoes_xpath)).getText();
         Assert.assertEquals(expectedTitleFS,actualTitleFS);
         if(expectedTitleFS.equals(actualTitleFS)){
