@@ -19,7 +19,7 @@ public class SeleniumTest {
       public static ExtentTest test;
         static ExtentReports extent= new ExtentReports();
     @BeforeSuite
-    public static void Setup() throws InterruptedException {
+    public void Setup() throws InterruptedException {
         driver= new ChromeDriver();
         driver.get("https://anupdamoda.github.io/AceOnlineShoePortal/index.html");
         ExtentSparkReporter spark=new ExtentSparkReporter("target/Spark.html");
@@ -52,7 +52,7 @@ test=extent.createTest("Validate Shoe title on Product page","this test validate
         ProductPages.sneakers_firstshoeVerify();
     }
     @AfterSuite
-    public static void cleanup(){
+    public void cleanup(){
         extent.flush();
     }
 }
